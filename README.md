@@ -2,7 +2,9 @@
 
 Redveil detects faces in photos and covers each face with a red privacy grid. It is built for quick local defacing: a command-line tool for files or folders, plus a small FastAPI endpoint for upload workflows.
 
-Redveil is a privacy aid, not a guarantee. Face detectors can miss faces, side profiles, low-light photos, masks, or stylized images. Review output before publishing sensitive images.
+The visual style is inspired by the red face veils often seen in AI video workflows, where creators want a clear, repeatable privacy layer over reference faces before sharing previews or datasets.
+
+Redveil is a privacy aid, not a guarantee or a moderation-bypass tool. Face detectors can miss faces, side profiles, low-light photos, masks, or stylized images. Review output before publishing sensitive images, and follow the policies of any platform where the output is uploaded.
 
 ## Features
 
@@ -41,6 +43,14 @@ curl -X POST "http://127.0.0.1:8000/redveil" \
 ```
 
 OpenAPI docs are available at `http://127.0.0.1:8000/docs`.
+
+## Deploy
+
+This repository includes a Vercel-compatible FastAPI entrypoint:
+
+```bash
+vercel --prod
+```
 
 ## Development
 
